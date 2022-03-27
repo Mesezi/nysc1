@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/99432baae3.js" crossorigin="anonymous"></script>
+    
+  </head>
+  <body>
+    <header>
+      <a href=""><img src="./logo-removebg-preview.png" alt=""></a>
+    </header>
+    <div  class=" navbar">
+      <img class="sd-none d-sm-block" src="./logo-removebg-preview.png" alt="">
+      <h1>NYSC PORTAL</h1>
+      <a href="#home" class="active"> <i class="fa-solid fa-house"></i> <p>Home</p></a>
+      <a href="#contact"> <i class="fa-solid fa-message"></i><p>Contact</p></a>
+      <a href="./user.html"> <i class="fa-solid fa-user"></i> <p>User</p></a>
+     <a href="#contact"> <i class="fa-solid fa-credit-card"></i> <p>Payment</p></a>
+      <a id="logout" href="./index.html"> <i class="fa-solid fa-arrow-right-from-bracket"></i><p>Log out</p></a>
+
+    </div>
+
+
+
+    <div class="container">
+      <div class="row">
+      <div class="col-md-2 col-sm-2" id="space"></div>
+      <div class="col-md-10 col-sm-10">
+        
+      <div>
+        
+        <div id="dt">
+          <p id="date">date</p>
+          <p id="time"></p>
+        </div>
+      <img id="userimg" src="" alt="">
+      </div>
+      <h6>Hi, <span id="hiname">Menuchim</span><img id="hi" src="./waving-hand.png" alt=""></h6>
+      <h4>Dashboard</h4>
+      <p><span>Basic info</span><img src="./information.png" alt=""></p>
+<div id="basic-info" class="row">
+<div class="first col-xm-6">
+  <div><span class="inf">Name:</span> <span id="l"></span><span id="f"></span></div><a href="">Apply for change of name</a>
+  <div><span class="inf">Batch:</span> <span id=""></span>A,2022</div>
+  <div><span class="inf">Gender:</span> <span id="g"></span></div>
+  <div><span class="inf">Email:</span> <span id="e"></span></div>
+</div>
+<div class="col-xm-6">
+  <div><span class="inf">State Code:</span> IM/22A/<span id="s"></span></div>
+  <div><span class="inf">NHS  No.:</span> <span id="n"></span></div>
+  <div><span class="inf">H.M.O:</span> <span id="">Paragon Hospital</span></div>
+  <div><span class="inf">Call-up No.:</span> NYSC/CVU/2022/<span id="c"></span></div>
+  
+  <a href="">Apply for relocation</a>
+</div>
+
+</div>
+<section id="note">
+  <p> <span>Pls note:</span> You cannot apply for DOB (Date of Birth) Correction after you have been documented in CAMP.
+    Also note that your Graduation Date, Date of Birth and Course of Study are going to appear on your Certificate of National Service.
+    Ensure that the above are correct before documentation in CAMP.</p>
+
+    <p>Ensure you print your green card slip, sign it and bring it to camp. It is compulsory for registration in camp.</p>
+    <a href="">Print slip</a>
+</section>
+<br>
+
+<section id="clearance">
+  <p>You have been scheduled for your monthly clearance. you are expected to be at your LGA on Wednesday, 
+    02/03/2022 from 8.00 AM to 9.30 AM. <br><a href="">Click here to print your schedule.</a><br>
+    Failure to show up on your scheduled date implies that you are absent from your PPA.</p>
+</section>
+<br>
+<article>
+  <h5> COVID19 PROTOCOL FOR PCM </h5>
+  <hr>
+  <p>
+    All prospective Corps members/Corps members are to note the following for strict compliance during the Orientation Course:
+<ul>
+  <li>Prospective Corps members/Corps members are expected to go to their Dashboards and fill in the COVID-19 test self-reporting format before printing of call up letters
+  </li>
+  <li>Corps members are to download and print the code and slip generated, for presentation at the Orientation camps.</li>
+  <li>All prospective corps members/corps members must adhere strictly to their assigned date of reporting to the Orientation Camps.</li>
+  <li>No prospective Corps member(s)/Corps member(s) will be allowed into the camps if they come before their appointment date.</li>
+  <li>Upon arrival at Camp, prospective Corps members/corps members must subject themselves to COVID-19 test.</li>
+  <li>Prospective Corps members/Corps members must report to camp with at least two (2) washable facemasks.</li>
+  <li>Wearing of facemasks on Camp at all times Is mandatory.</li>
+  <li>Corps members must take responsibility of their own safety And ensure strict compliance with all COVID-19 Safety Protocols.</li>
+  <li>All foreign trained prospective Corps members/corps members must arrive the Country two (2) weeks before the commencement of the Orientation Course.
+  </li>
+  <li>Frequent washing of hands at the wash hand points And use of alcohol based hand sanitizer.</li>
+  <li>Physical distancing must be observed in all Camp activities.</li>
+  <li>Avoid touching of face with unwashed hands.</li>
+  <li>Number of worshippers will be regulated at the approved religious centres.</li>
+<li> All Corps members must attend the sensitization on Infection, Prevention And Control (IPC) of COVID-19 to be conducted in the Camps.
+</li>
+</ul>
+<a href="#">Kindly click on this link to register for COVID19 test/print your registration slip</a>
+
+  </p>
+</article>
+
+
+<section id="follow">
+  <h6>Follow us 
+    <a id="tw" href=""><img src="./logo-twitter-png-5859.png" alt=""></a> 
+   <a id="ig" href=""><img src="./instagram.png" alt=""></a> 
+   <a id="fb" href=""><img src="./facebook.png" alt=""></a> </h6>
+</section>
+
+<hr>
+
+    </div>
+  </div>
+  </div>
+    <footer>
+      <P>mesezi 2022</P>
+        </footer>
+    <script src="js/bootstrap.js"></script>
+    <script>
+     text = sessionStorage.getItem("testData");
+     obj = JSON.parse(text);
+     document.getElementById("hiname").innerHTML= obj.firstname;
+     document.getElementById("f").innerHTML= obj.firstname;
+     document.getElementById("l").innerHTML= obj.lastname;
+     document.getElementById("g").innerHTML= obj.gender;
+     document.getElementById("e").innerHTML= obj.email;
+     document.getElementById("s").innerHTML= obj.scode;
+     document.getElementById("n").innerHTML= obj.nhs;
+     document.getElementById("c").innerHTML= obj.cu;
+     
+       let gender= obj.gender;
+       let img = document.getElementById("userimg");
+       if (gender === "M"){
+        img.src = "./man.png";
+       }
+       else {
+        img.src = "./woman.png";
+       }
+     
+     
+     
+         </script>
+         <script src="./nyscc.js"></script>
+   
+  </body>
+  </html>

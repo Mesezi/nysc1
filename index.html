@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="https://kit.fontawesome.com/99432baae3.js" crossorigin="anonymous"></script>
+    <script>
+ function getStarted(){
+
+function makeid() {
+var text = "";
+var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+for (var i = 0; i < 3; i++)
+  text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+return text;
+}
+val = makeid();
+var numval = Math.floor(100 + Math.random() * 900);
+val += numval;
+
+var statecode = Math.floor(1000 + Math.random() * 9000);
+
+var callup = Math.floor(100000 + Math.random() * 900000);
+
+
+ var data = {
+   nhs : val,
+   cu: callup,
+   scode: statecode,
+   firstname: document.getElementById("fn").value,
+   lastname: document.getElementById("ln").value,
+   email: document.getElementById("mail").value,
+   tel: document.getElementById("no").value,
+   gender: document.getElementById("gender").value,
+   marital: document.getElementById("marital").value,
+   uni: document.getElementById("uni").value,
+  password: document.getElementById("pw").value,
+  course: document.getElementById("study").value
+  }
+      myjson = JSON.stringify(data);
+      sessionStorage.setItem("testData", myjson);
+      return false
+  }
+
+    </script>
+  </head>
+  <body>
+<div id="login">
+    <section><img src="./logo-removebg-preview.png" alt=""></section>
+    <form action="./home.html">
+        <div  class="data">
+        <input id="fn" type="text" required placeholder="First Name"> </div>
+
+        <div  class="data">
+            <input id="ln" type="text" required placeholder="Last Name"></div>
+
+     <div  class="data">  
+        <input id="mail" type="email" required placeholder="example@email.com"></div>
+
+        <div  class="data">
+            <input id="no" type="tel" required placeholder="Phone number"></div>
+
+        <div class="data">
+          <label for="gender">Gender:</label>
+            <select name="gender" id="gender">
+                <option></option>
+              <option id="gender" value="M">Male</option>
+              <option id="gender" value="F"> Female</option>
+            </select></div>
+            <div class="data">
+              <label for="mstatus">Marital Status:</label>
+                <select name="status" id="marital">
+                    <option></option>
+                  <option id="marital" value="Single">Single</option>
+                  <option id="marital" value="Married">Married</option>
+                  <option id="marital" value="Divorced">Divorced</option>
+                  <option id="marital" value=" It's complicated" >It's complicated</option>
+                </select></div>
+
+            <div id="pass"  class="data">
+              <input id="pw" type="password" required placeholder="Password"><input id="c" type="checkbox" onclick="check();"> <span>Show password</span>
+            </div>
+
+            <div  class="data">
+              <input id="uni" type="text" required placeholder="Institution"></div>
+
+              <div  class="data">
+                <input id="study" type="text" required placeholder="Course of Study"></div>
+            
+            <button type="submit" onclick= "getStarted();">Get started</button>
+    </form>
+    
+</div>
+<footer>
+  <P>mesezi 2022</P>
+    </footer>
+<script src="./nyscc.js"></script>
+    <script src="js/bootstrap.js"></script>
+    
+  </body>

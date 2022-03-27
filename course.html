@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/99432baae3.js" crossorigin="anonymous"></script>
+    
+  </head>
+  <body>
+
+    <div  class=" navbar">
+      <img class="sd-none d-sm-block" src="./logo-removebg-preview.png" alt="">
+      <a href="./home.html"> <i class="fa-solid fa-house"></i> <p>Home</p></a>
+      <a href="#"> <i class="fa-solid fa-message"></i><p>Contact</p></a>
+      <a href="#" class="active"> <i class="fa-solid fa-user"></i> <p>User</p></a>
+     <a href="#"> <i class="fa-solid fa-credit-card"></i> <p>Payment</p></a>
+      <a href="./index.html"> <i class="fa-solid fa-arrow-right-from-bracket"></i><p>Log out</p></a>
+
+    </div>
+
+<header>
+  
+  <a href=""><img src="./logo-removebg-preview.png" alt=""></a>
+</header>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 col-sm-2"></div>
+        <div class="col-md-10 col-sm-10">
+
+      <div id="coursemain">
+          <img src="./checkmark.png" alt="">
+         <h4>COURSE CORRECTION</h4>
+       <form>
+         <p>Name: <span id="l"></span> <span id="f"></span></p>
+         <p>Email: <span id="e"></span></p>
+         <p>Marital Status: <span id="m"></span></p>
+         <p>Phone Number: <span id="p"></span></p>
+         <p>State Code: <span>IM/21C/</span> <span id="s"></span></p>
+         <p>Institution: <span id="uni"></span></p>
+         <p>Course of Study: <span id="c"></span></p>
+         <p>Mobilization Status: <span id="">Mobilised</span></p>
+
+
+         <label for="course">Course </label>
+         
+        <input id="cc" type="text" placeholder="Enter correct Course" required>
+        <br><br>
+        <label for="degree">Class of degree </label>
+        <select name="dg" id="dg" required>
+          <option id="dg" value = "null"></option>
+        <option id="dg" value="First Class">First Class</option>
+        <option id="dg" value="Second Class Upper">Second Class Upper</option>
+        <option id="dg"  value="Second Class Lower">Second Class Lower</option>
+        <option id="dg" value=" Third Class " >Third Class </option>
+        <option id="dg" value=" Pass" >Pass </option>
+      </select><br>
+
+      <div><p onclick="change();">Send request</p></div>
+    </form>
+        
+        <div id="popup1" class="overlay">
+          <div class="popup">
+            <img src="./xig67ak5T.gif" alt="">
+            <p class="content">
+              Request Sent. <a href="./user.html">Back</a>
+            </p>
+            
+          </div>
+         
+        </div>
+
+
+      </div>
+        </div>
+      </div>
+      
+
+  </div>
+    <footer>
+      <P>mesezi 2022</P>
+        </footer>
+    <script src="js/bootstrap.js"></script>
+    <script>
+      text = sessionStorage.getItem("testData");
+      obj = JSON.parse(text);
+
+      document.getElementById("f").innerHTML= obj.firstname;
+      document.getElementById("l").innerHTML= obj.lastname;
+      document.getElementById("e").innerHTML= obj.email;
+      document.getElementById("s").innerHTML= obj.scode;
+      document.getElementById("p").innerHTML= obj.tel;
+      document.getElementById("m").innerHTML= obj.marital;
+      document.getElementById("uni").innerHTML= obj.uni;
+      document.getElementById("c").innerHTML= obj.course;
+
+      function change(){
+        let correctc = document.getElementById("cc").value;
+          let dg = document.getElementById("dg").value;
+        if (correctc === ""){
+          alert("Enter Correct Course first")
+        }
+        else {
+          if (dg === "null"){
+            alert("Select Class of degree") 
+          }
+          else{
+            document.getElementById("popup1").style.visibility = "visible";
+           document.getElementById("popup1").style.opacity = "1";
+          }
+        }
+          
+      }
+      
+          </script>
+            </script>
+         <script src="./nyscc.js"></script>
+         <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+   
+  </body>
+  </html>

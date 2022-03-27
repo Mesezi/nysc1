@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  box-sizing: border-box;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  background: url(../corper-nysc.png) ;
+  background-color: rgb(51, 51, 51,);
+  background-position:top;
+  font-weight: bold;
+  
+}
+#login {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 530px;
+width: 300px;
+border: solid 1px #ffffff;
+border-radius: 10px;
+
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  padding: 5px 15px 5px 15px;
+}
+section img{
+    display: block;
+    height: 71px;
+    margin-left: auto;
+    margin-right:auto;
+    
+}
+form{
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+    margin-bottom: 20px;
+}
+button{
+  display: block;
+  text-align: center;
+  background-color: #04AA6D;
+  color: white ;
+  border-radius: 5px;
+  width: 100%;
+  padding: 5px;
+  border: 0;
+  margin-top: 18px;
+
+}
+button:hover{
+  transform: scale(1.1);
+  transition: 0.9s;
+}
+button:active{
+  background-color: #04AA6D;
+  color: white 0%;
+}
+.data{
+  margin: 17px 0 0px 0;
+}
+#password {
+  margin-top: 15px;
+}
+input {
+  padding: 10px;
+  width: 100%;
+  height: 28px;
+  border: none;
+  background-color: #ffffff;
+  color: black;
+  font-weight: bold;
+}
+#pw{
+  width: 53%;
+  }
+  #c {
+    width: 10%;
+    height: 15px;
+  }
+#pass span {
+  color: white;
+}
+select {
+  float: right;
+  width: 50%;
+  height: 28px;
+  border: none;
+  background-color: #ffffff;
+  color: black;
+}
+input:hover{
+  transform: scale(1.02);
+  transition: 0.9s;
+}
+label{
+  color: white;
+  text-shadow: #333 0 0 0 2px;
+}
+
+footer {
+
+  background-color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+   
+}
+footer P {
+  text-align: center;
+  color: white;
+}
