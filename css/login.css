@@ -9,8 +9,8 @@ body{
   font-family: 'Montserrat', sans-serif;
   background: url(../corper-nysc.png) ;
   background-color: whitesmoke;
-  background-position:top;
-  font-weight: bold;
+  background-position:bottom;
+    font-weight: bold;
   
 }
 #login {

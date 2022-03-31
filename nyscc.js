@@ -210,6 +210,15 @@ function check(){
         p.type = "password"
     }
 
-}
 
-           
+}
+function checkn(){
+    var p = document.getElementById("pasw");
+    if (p.type === "password"){
+     p.type = "text";
+    }
+    else{
+        p.type = "password"
+    }
+
+}        

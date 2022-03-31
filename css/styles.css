@@ -137,6 +137,9 @@ article h5{
 .container  p > img{
   height: 30px;
 }
+#l, #f {
+  font-size: 11px;
+}
 
 article a:hover{
   color:#f7931c;
@@ -147,6 +150,7 @@ article a:hover{
 
 .first > p:nth-child(1) {
 margin-bottom: 16px;
+
 }
 
 #note{
@@ -244,7 +248,7 @@ font-weight: bolder;
   margin-bottom: 10px;
 }
 #f {
-  margin-left: 3px;
+  margin-left: 2px;
 }
 .navbar img {
 color: white;
@@ -276,7 +280,7 @@ i{
   color:#f7931c
 } 
 #usermain{
-  height: 500px;
+  height: 580px;
 }
 .userp img{
   margin-left: auto;
@@ -418,6 +422,31 @@ padding-left: 5px;
   margin-right: auto;
   text-align: center;
   border-radius: 4px;
+}
+.popup span {
+  font-weight: bold;
+}
+/*APPLY FOR CHANGE OF NAME */
+#pp1 label{
+  color: #04AA6D;
+  font-weight: bold;
+}
+#pp1 #butt{
+  margin-top: 10px;
+  background-color: #333;
+  border:#333 1px solid;
+  font-size: 12px;
+  padding: 7px;
+  border-radius: 3px;
+  color: white;
+}
+#pp1 #butt:hover{
+  background-color: rgb(255, 255, 255);
+  border-radius: 3px;
+  border:#333 1px solid;
+  padding: 7px;
+  color: #333;
+  
 }
 
 
@@ -659,6 +688,9 @@ h1{
 
 @media (min-width: 578px){
   body{
+    font-size: 19px;
+  }
+  #l, #f {
     font-size: 19px;
   }
   h1{

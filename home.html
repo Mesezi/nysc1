@@ -42,23 +42,11 @@
       <h6>Hi, <span id="hiname">Menuchim</span><img id="hi" src="./waving-hand.png" alt=""></h6>
       <h4 id="dash">Dashboard</h4>
       <p><span>Basic info</span><img src="./information.png" alt=""></p>
-      <div id="popup1" class="overlay">
-        <div class="popup">
-          <img id="popimg" src="./logo-removebg-preview.png" alt="">
-          <a class="close" id="cl" href="#">&times;</a>
-          <h5>Foreign Verification Exercise</h5>
-
-          <p class="popm">
-           All foreign trained graduates cleared online but yet to do
-            physical verification of documents are advised to come to NYSC National HQ for clearance from 9th March to 15th March 2022
-          </p>
-          
-        </div>
-       
-      </div>
+      
+     
 <div id="basic-info" class="row">
 <div class="first col-xm-6">
-  <div><span class="inf">Name:</span> <span id="l"></span><span id="f"></span></div><a href="">Apply for change of name</a>
+  <div><span class="inf">Name:</span> <span id="l"></span><span id="f"></span></div><a href="#" onclick="changeName();"> Apply for change of name</a>
   <div><span class="inf">Batch:</span> <span id=""></span>A,2022</div>
   <div><span class="inf">Gender:</span> <span id="g"></span></div>
   <div><span class="inf">Email:</span> <span id="e"></span></div>
@@ -128,13 +116,72 @@
 </section>
 
 <hr>
+<div id="popup1" class="overlay">
+  <div class="popup">
+    <img id="popimg" src="./logo-removebg-preview.png" alt="">
+    <a class="close" id="cl" href="#">&times;</a>
+    <h5>Foreign Verification Exercise</h5>
 
+    <p class="popm">
+     All foreign trained graduates cleared online but yet to do
+      physical verification of documents are advised to come to NYSC National HQ for clearance from 9th March to 15th March 2022
+    </p>
+    <p>Signed <span>Management</span></p>
+    
+  </div>
     </div>
+    <div id="pp1" class="overlay">
+      <div class="popup">
+        <img id="popimg" src="./logo-removebg-preview.png" alt="">
+        <a class="close" id="clo" href="#">&times;</a>
+        <h5>Apply For Change of Name</h5>
+        <p>You are required to supply the correct name. This will go through due approval process</p>
+        <form action="">
+            <label for="email">Email:</label> <span id="em"></span>
+            <br>
+            <div><label for="first">Enter First Name</label>
+              <br>
+              <input type="text" required id="fi"></div>
+            
+            
+            <div>  <label for="Last">Enter Last Name</label>
+              <br>
+              <input type="text"required id="la"></div>
+          
+           
+            <div>  <label for="password">Password</label>
+              <br>
+              <input type="password"required id="pasw">
+              <br>
+            
+              <input  type="checkbox" onclick="checkn();"> Show password</div>
+          
+              <p id="butt" onclick="chName();">Send Request</p>
+        </form>
+      </div>
+        </div>
+        <div id="namec" class="overlay">
+          <div class="popup">
+            <img src="./xig67ak5T.gif" alt="">
+            <p class="content">
+               Request sent <a href="./home.html">Back</a>
+            </p>
+            
+          </div>
+         
+        </div>
   </div>
+  <footer>
+    <P>mesezi 2022</P>
+      </footer>
+
   </div>
-    <footer>
-      <P>mesezi 2022</P>
-        </footer>
+    
+
+
+
+
+
     <script src="js/bootstrap.js"></script>
     <script>
  text = sessionStorage.getItem("testData");
@@ -147,6 +194,7 @@
      document.getElementById("s").innerHTML= obj.scode;
      document.getElementById("n").innerHTML= obj.nhs;
      document.getElementById("c").innerHTML= obj.cu;
+     document.getElementById("em").innerHTML= obj.email;
      
        let gender= obj.gender;
        let img = document.getElementById("userimg");
@@ -160,11 +208,48 @@
        document.getElementById("popup1").style.visibility = "visible";
         document.getElementById("popup1").style.opacity = "1";
        
-const close = document.getElementById("cl");
-close.onclick =  function closePop(){
+const close = document.getElementsByClassName("close");
+close[0].onclick =  function closePop(){
     document.getElementById("popup1").style.visibility = "hidden";
    document.getElementById("popup1").style.opacity = "0";
    }
+   close[1].onclick =  function closePop(){
+    document.getElementById("pp1").style.visibility = "hidden";
+   document.getElementById("pp1").style.opacity = "0";
+   }
+function changeName(){
+  document.getElementById("pp1").style.visibility = "visible";
+        document.getElementById("pp1").style.opacity = "1";
+}   
+
+function chName(){
+          let lname = document.getElementById("la").value;
+          let fname = document.getElementById("fi").value;
+          let pasw = document.getElementById("pasw").value;
+          let loginp = obj.password;
+
+          if (pasw === loginp ){
+          
+          document.getElementById("namec").style.visibility = "visible";
+           document.getElementById("namec").style.opacity = "1";
+           
+           text = sessionStorage.getItem("testData");
+        obj = JSON.parse(text);
+
+        obj.firstname = fname;
+        obj.lastname = lname;
+
+        myjson = JSON.stringify(obj);
+      sessionStorage.setItem("testData", myjson);
+           
+           }
+          
+          else{
+          alert ("Password is incorrect")
+          }
+
+        }
+
      
          </script>
          <script src="./nyscc.js"></script>
