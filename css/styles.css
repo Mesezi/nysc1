@@ -5,7 +5,7 @@
 }
 body{
   box-sizing: border-box;
-  font-size: 15px;
+  font-size: 14px;
   font-family: 'Montserrat', sans-serif;
   color: black;
   background-color: whitesmoke;
@@ -254,10 +254,21 @@ i{
   display: block;
   font-size: large;
 }
-
-#basic-info a:hover {
-  color: #f7931c;
-}
+  #basic-info a{
+    color: #04AA6D;
+    margin-bottom: 10px;  
+    text-decoration: none;
+    }
+    
+    #basic-info a  img{
+    height: 20px;
+    }
+    
+    
+    #basic-info a:hover {
+      color: #f7931c;
+      font-weight: bold;
+    }
 .col-md-10 > p > i{
   color: #04AA6D;
   font-size: 30px;
@@ -368,7 +379,7 @@ padding-left: 5px;
   position: relative;
 
 }
-.popup p {
+.popup > p {
   color: rgb(0, 0, 0);
   text-align: center;
   margin-bottom: 2px;
@@ -430,7 +441,7 @@ padding-left: 5px;
   color: #04AA6D;
   font-weight: bold;
 }
-#pp1 #butt{
+.butt{
   margin-top: 5px;
   background-color: #333;
   border:#333 1px solid;
@@ -438,13 +449,16 @@ padding-left: 5px;
   padding: 7px;
   border-radius: 3px;
   color: white;
+  font-weight: bold;
+  text-align: center;
 }
-#pp1 #butt:hover{
+.butt:hover{
   background-color: rgb(255, 255, 255);
   border-radius: 3px;
   border:#333 1px solid;
   padding: 7px;
   color: #333;
+  font-weight: bold;
   
 }
 
@@ -607,7 +621,43 @@ color: #04AA6D;
 #dpmain section hr{
  margin-bottom: 5px;
 }
-
+/*relocate */
+#rmain img {
+  height: 70px;
+  height: 70px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#rmain input, #rmain select {
+  width: 100%;
+}
+#rmain form  p, label{
+color: #04AA6D;
+font-weight: bold;
+}
+#rmain form p{
+  margin-bottom: 5px;
+}
+#rmain form p span{
+  font-weight: normal;
+  color: black;
+}
+#rmain section{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: white;
+}
+#rmain hr {
+  margin-bottom: 5px;
+}
+#rmain article{
+  background-color: white;
+}
+#doc {
+  background-color: #04AA6D;
+  border: none;
+}
 
 
 

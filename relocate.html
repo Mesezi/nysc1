@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/99432baae3.js" crossorigin="anonymous"></script>
+    
+  </head>
+  <body>
+
+    <div  class=" navbar">
+      <img class="sd-none d-sm-block" src="./logo-removebg-preview.png" alt="">
+      <a href="./home.html"> <i class="fa-solid fa-house"></i> <p>Home</p></a>
+      <a href="#"> <i class="fa-solid fa-message"></i><p>Contact</p></a>
+      <a href="./user.html" class="active"> <i class="fa-solid fa-user"></i> <p>User</p></a>
+     <a href="#"> <i class="fa-solid fa-credit-card"></i> <p>Payment</p></a>
+      <a href="./index.html"> <i class="fa-solid fa-arrow-right-from-bracket"></i><p>Log out</p></a>
+
+    </div>
+
+<header>
+  
+  <a href=""><img src="./logo-removebg-preview.png" alt=""></a>
+</header>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 col-sm-2"></div>
+        <div class="col-md-10 col-sm-10">
+
+      <div id="rmain">
+          <img src="relocation.png" alt="">
+         <h4>Relocation Application</h4>
+        <form action="">
+            <div><p>Title: <span id="ti"></span> </p>
+                <p>Name: <span id="f"></span><span id="l"></span> </p>
+                <p>Gender: <span id="g"></span> </p>
+                <p>Phone No. : <span id="p"></span> </p>
+                <p>State of Health: <span>Good</span> </p>
+                <p>Course: <span id="c"></span> </p> 
+                </div>
+
+            <section><p>Application History</p>
+                <hr>
+                <span>No History</span></section>
+
+            <article><p>Application Status</p>
+                <hr>
+                <p>State Code. :<span>IM/22A/<span id="s"></span></span>  </p>
+                <label for="reason">Reason for Relocation</label>
+                <br>
+                <select name="" id="" required>
+                    <option></option>
+                    <option value="Insecurity">Insecurity</option>
+                    <option value="Marital">Marital</option>
+                </select>
+                <br>
+                <label for="why">Description for Relocating</label>
+                <br><input type="textarea" rows="5" cols="30"  required>
+                <br>
+    
+                <label for="state">State Relocating to</label>
+                <br><input type="text" required>
+            <br>
+            <label for="img">Add Document:</label>
+                <input type="file" id="img" name="img" accept="image/*">
+            </article>
+                
+                
+
+            
+            <br>
+            <p class="butt" onclick="send();">Send Request</p>
+        </form>
+        
+        <div id="popup1" class="overlay">
+          <div class="popup">
+            <img src="./xig67ak5T.gif" alt="">
+            <p class="content">
+               Request Sent. <a href="./user.html">Back</a>
+            </p>
+            
+          </div>
+         
+        </div>
+
+
+      </div>
+        </div>
+      </div>
+      
+
+  </div>
+    <footer>
+      <P>mesezi 2022</P>
+        </footer>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        text = sessionStorage.getItem("testData");
+        obj = JSON.parse(text);
+var g = obj.gender;
+var m = obj.marital
+        document.getElementById("f").innerHTML= obj.firstname;
+     document.getElementById("l").innerHTML= obj.lastname;
+     document.getElementById("g").innerHTML= obj.gender;
+     document.getElementById("s").innerHTML= obj.scode;
+     document.getElementById("c").innerHTML= obj.course;
+     document.getElementById("p").innerHTML= obj.tel;
+
+     if (g === "F"){
+         if(m === "Married"){
+            document.getElementById("ti").innerHTML= "Mrs";
+         } 
+         else{
+             document.getElementById("ti").innerHTML = "Miss"
+         }
+     }
+     else {
+         document.getElementById("ti").innerHTML = "Mr"
+     }
+     function send(){
+        document.getElementById("popup1").style.visibility = "visible";
+           document.getElementById("popup1").style.opacity = "1";
+     }
+
+        
+        
+            </script>
+         <script src="./nyscc.js"></script>
+   
+  </body>
+  </html>
