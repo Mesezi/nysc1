@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/99432baae3.js" crossorigin="anonymous"></script>
+    
+  </head>
+  <body>
+
+    <div  class=" navbar">
+      <img class="sd-none d-sm-block" src="./logo-removebg-preview.png" alt="">
+      <a href="./home.html"> <i class="fa-solid fa-house"></i> <p>Home</p></a>
+      <a href="#"> <i class="fa-solid fa-message"></i><p>Contact</p></a>
+      <a href="./user.html" class="active"> <i class="fa-solid fa-user"></i> <p>User</p></a>
+     <a href="#"> <i class="fa-solid fa-credit-card"></i> <p>Payment</p></a>
+      <a href="./index.html"> <i class="fa-solid fa-arrow-right-from-bracket"></i><p>Log out</p></a>
+
+    </div>
+
+<header>
+  
+  <a href=""><img src="./logo-removebg-preview.png" alt=""></a>
+</header>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 col-sm-2"></div>
+        <div class="col-md-10 col-sm-10">
+
+      <div id="lgamain">
+          <img src="./scheduling.png" alt="">
+         <h4>LGA Clearance</h4>
+         <div id="tbl">
+            <span class="h">Name:</span> <span id="l"></span><span id="f"></span><br>
+            <span class="h">Email:</span> <span id="e"></span><br>
+            <span class="h">Callup No. : </span><span>IM/22A/<span id="s"></span> </span>
+            <br>
+            
+             <table>
+                 <tr id="head">
+                     <th>S/N</th>
+                     <th>MONTH</th>
+                     <th>STATUS</th>
+                 </tr>
+                 <tr>
+                     <td>1</td>
+                     <td>January</td>
+                     <td><img src="./check.png" alt=""></td>
+                 </tr>
+                 <tr>
+                    <td>2</td>
+                    <td>February</td>
+                    <td><img src="./check.png" alt=""></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>March</td>
+                    <td><img src="./check.png" alt=""></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>April</td>
+                    <td>pending..</td>
+                </tr>
+                <tr>
+                     <td>5</td>
+                     <td>May</td>
+                     <td>pending..</td>
+                 </tr>
+                 <tr>
+                    <td>6</td>
+                    <td>June</td>
+                    <td>pending..</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>July</td>
+                    <td>pending..</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>August</td>
+                    <td>pending..</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>September</td>
+                    <td>pending..</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>October</td>
+                    <td>pending..</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>November</td>
+                    <td>pending..</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>December</td>
+                    <td>pending..</td>
+                </tr>
+                
+             </table>
+             
+         </div>
+      
+
+
+      </div>
+        </div>
+      </div>
+      
+
+  </div>
+    <footer>
+      <P>mesezi 2022</P>
+        </footer>
+    <script src="js/bootstrap.js"></script>
+    <script>
+      text = sessionStorage.getItem("testData");
+     obj = JSON.parse(text);
+     document.getElementById("f").innerHTML= obj.firstname;
+     document.getElementById("l").innerHTML= obj.lastname;
+     document.getElementById("e").innerHTML= obj.email;
+     document.getElementById("s").innerHTML= obj.scode;
+          </script>
+            
+         <script src="./nyscc.js"></script>
+   
+  </body>
+  </html>

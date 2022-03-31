@@ -40,8 +40,22 @@
       <img id="userimg" src="" alt="">
       </div>
       <h6>Hi, <span id="hiname">Menuchim</span><img id="hi" src="./waving-hand.png" alt=""></h6>
-      <h4>Dashboard</h4>
+      <h4 id="dash">Dashboard</h4>
       <p><span>Basic info</span><img src="./information.png" alt=""></p>
+      <div id="popup1" class="overlay">
+        <div class="popup">
+          <img id="popimg" src="./logo-removebg-preview.png" alt="">
+          <a class="close" id="cl" href="#">&times;</a>
+          <h5>Foreign Verification Exercise</h5>
+
+          <p class="popm">
+           All foreign trained graduates cleared online but yet to do
+            physical verification of documents are advised to come to NYSC National HQ for clearance from 9th March to 15th March 2022
+          </p>
+          
+        </div>
+       
+      </div>
 <div id="basic-info" class="row">
 <div class="first col-xm-6">
   <div><span class="inf">Name:</span> <span id="l"></span><span id="f"></span></div><a href="">Apply for change of name</a>
@@ -105,6 +119,7 @@
 </article>
 
 
+
 <section id="follow">
   <h6>Follow us 
     <a id="tw" href=""><img src="./logo-twitter-png-5859.png" alt=""></a> 
@@ -122,7 +137,7 @@
         </footer>
     <script src="js/bootstrap.js"></script>
     <script>
-     text = sessionStorage.getItem("testData");
+ text = sessionStorage.getItem("testData");
      obj = JSON.parse(text);
      document.getElementById("hiname").innerHTML= obj.firstname;
      document.getElementById("f").innerHTML= obj.firstname;
@@ -141,8 +156,15 @@
        else {
         img.src = "./woman.png";
        }
-     
-     
+
+       document.getElementById("popup1").style.visibility = "visible";
+        document.getElementById("popup1").style.opacity = "1";
+       
+const close = document.getElementById("cl");
+close.onclick =  function closePop(){
+    document.getElementById("popup1").style.visibility = "hidden";
+   document.getElementById("popup1").style.opacity = "0";
+   }
      
          </script>
          <script src="./nyscc.js"></script>

@@ -1,4 +1,5 @@
 window.onload = function (){
+
 var today = new Date();
   let year = today.getFullYear()
  let month = today.getMonth()+1
@@ -47,7 +48,7 @@ var date = day + " " + month + ", " + year;
   var today = new Date();
 let hour = today.getHours();
  let min = today.getMinutes();
- time = ""
+ var time = ""
 
 function amPm(){
     if (hour === 1){
@@ -157,7 +158,29 @@ setMin();
 var currenttime = hour + ":" + min + " " + time;
     document.getElementById("time").innerHTML = currenttime;
     
+
+   // function mode (){
+   ///     var d = document.getElementsByTagName("header");
+    //    var f = document.getElementsByTagName("footer");
+   //     var n = document.getElementsByClassName("navbar");
+     //   var t = document.getElementById("note");
+     //   let dark = document.body; 
+        
+    //    if (hour > 13 &&  <= 24){ 
+    //    dark.style.backgroundColor = "#333";
+   //     dark.style.color = "white";
+     //   f[0].style.backgroundColor = "black";
+    //    t.style.boxShadow = "black 0 0 0px 0";
+   //     d[0].style.boxShadow = "black 0 0 10px 0";
+   //     n[0].style.boxShadow = "black 0 0 5px 0";
+        
+   //     }
+   //     else return 
+   // }
+//mode();    
 }
+
+
 function checkn(){
     var p = document.getElementById("new");
     if (p.type === "password"){
@@ -188,3 +211,5 @@ function check(){
     }
 
 }
+
+           

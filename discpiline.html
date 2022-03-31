@@ -31,16 +31,23 @@
         <div class="col-md-2 col-sm-2"></div>
         <div class="col-md-10 col-sm-10">
 
-      <div id="ppamain">
-          <img src="./letter.png" alt="">
-         <h4>Place of Primary Assignment</h4>
-         <div>
-             <img src="./print.png" alt="">
-             <a href="./print.png" target="_blank" download>Download PPA letter</a>
-         </div>
+      <div id="dpmain">
+          <img src="./judge.png" alt="">
+         <h4>Disciplinary Case</h4>
+         <p>Name: <span id="l"></span><span id="f"></span></p>
+         <p>State Code: <span>IM/22A/<span id="s"></span></span></p>
+         <p>Call-up No.: <span> NYSC/CVU/2022/<span id="c"></span></span></p>
+
+
+         <section><h6>Disciplinary Case history</h6>
+            <p>You may appeal your disciplinary case(s) below if allowed </p>
+            <hr>
+            <span>No Case Record</span></section>
       
-
-
+        <section> <h6>Appeal Message History</h6>
+            <p>You are required to respond to disciplinary messages to you </p>
+            <hr>
+            <span>No Messages</span></section>
       </div>
         </div>
       </div>
@@ -52,7 +59,13 @@
         </footer>
     <script src="js/bootstrap.js"></script>
     <script>
-      
+       
+      text = sessionStorage.getItem("testData");
+     obj = JSON.parse(text);
+     document.getElementById("f").innerHTML= obj.firstname;
+     document.getElementById("l").innerHTML= obj.lastname;
+     document.getElementById("s").innerHTML= obj.scode;
+     document.getElementById("c").innerHTML= obj.cu;
           </script>
             </script>
          <script src="./nyscc.js"></script>
