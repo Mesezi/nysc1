@@ -5,7 +5,7 @@
 }
 body{
   box-sizing: border-box;
-  font-size: 12px;
+  font-size: 14px;
   font-family: 'Montserrat', sans-serif;
   background: url(../corper-nysc.png) ;
   background-color: whitesmoke;
@@ -61,7 +61,7 @@ button:active{
   color: white 0%;
 }
 .data{
-  margin: 17px 0 0px 0;
+  margin: 13px 0 0px 0;
 }
 #password {
   margin-top: 15px;
@@ -76,10 +76,9 @@ input {
   font-weight: bold;
   border-radius: 5px;
 }
-#pw{
-  width: 53%;
-  }
+
   #c {
+    margin-top: 5px;
     width: 10%;
     height: 15px;
   }
@@ -101,7 +100,9 @@ input:hover{
 }
 label{
   color: white;
+  padding: 5px;
   text-shadow: #333 0 0 0 2px;
+  background-color: #333;
 }
 
 footer {
@@ -115,4 +116,15 @@ footer {
 footer P {
   text-align: center;
   color: white;
+}
+
+@media (min-width: 1191px){
+  body{
+    background-image:url(../nysc\ new.png);
+  }
+}
+@media (max-width: 400px) {
+  body{
+    background-image:url(../nysc\ mobile.png);
+  }
 }

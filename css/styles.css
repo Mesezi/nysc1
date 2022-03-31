@@ -5,7 +5,7 @@
 }
 body{
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 15px;
   font-family: 'Montserrat', sans-serif;
   color: black;
   background-color: whitesmoke;
@@ -360,11 +360,11 @@ padding-left: 5px;
 }
 
 .popup {
-  margin: 70px auto;
+  margin: 40px auto;
   padding: 20px;
   background-color: white;
   border-radius: 5px;
-  width: 62%;
+  width: 92%;
   position: relative;
 
 }
@@ -688,6 +688,9 @@ h1{
 @media (min-width: 578px){
   body{
     font-size: 19px;
+  }
+  .popup {
+    width: 62%;
   }
 
   h1{
