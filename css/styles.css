@@ -658,9 +658,51 @@ font-weight: bold;
   background-color: #04AA6D;
   border: none;
 }
+/*contact */
+#cmain img {
+  height: 70px;
+  height: 70px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#cmain > div h6{
+  text-align: center;
+  margin-bottom: 3px;
+  font-weight: bold;
+  color: #333;
+  padding: 5px;
+}
+#cmain p {
+margin-bottom: 7px;
+  text-align: center;
+}
 
+#cmain a{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color:#04AA6D;
+  font-weight: bold;
 
-
+}
+#cmain > p{
+  font-style: italic;
+}
+#cmain a:hover{
+  color: #f7931c;
+}
+#cmain div{
+  margin-bottom: 10px;
+}
+#cmain i{
+  color: #04AA6D;
+  font-size: 23px;
+  margin-left: 3px;
+}
+#cmain {
+  height: 550px;
+}
 
 
 
@@ -737,7 +779,7 @@ h1{
 
 @media (min-width: 578px){
   body{
-    font-size: 19px;
+    font-size: 20px;
   }
   .popup {
     width: 62%;
