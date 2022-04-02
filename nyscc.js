@@ -226,3 +226,13 @@ function checkn(){
     }
 
 }        
+function checkt(){
+    var p = document.getElementById("new");
+    if (p.type === "password"){
+     p.type = "text";
+    }
+    else{
+        p.type = "password"
+    }
+
+}        
