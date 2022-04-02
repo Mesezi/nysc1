@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Relocation</title>
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/styles.css">
     <script src="https://kit.fontawesome.com/99432baae3.js" crossorigin="anonymous"></script>
@@ -12,11 +12,12 @@
   <body>
 
     <div  class=" navbar">
-      <img class="sd-none d-sm-block" src="./logo-removebg-preview.png" alt="">
+    <img class="sd-none d-sm-block" src="./logo-removebg-preview.png" alt="">
+      <h1>NYSC PORTAL</h1>
       <a href="./home.html"> <i class="fa-solid fa-house"></i> <p>Home</p></a>
       <a href="./contact.html"> <i class="fa-solid fa-message"></i><p>Contact</p></a>
       <a href="./user.html" class="active"> <i class="fa-solid fa-user"></i> <p>User</p></a>
-     <a href="#"> <i class="fa-solid fa-credit-card"></i> <p>Payment</p></a>
+     <a href="./payment.html"> <i class="fa-solid fa-credit-card"></i> <p>Payment</p></a>
       <a href="./index.html"> <i class="fa-solid fa-arrow-right-from-bracket"></i><p>Log out</p></a>
 
     </div>
@@ -36,51 +37,48 @@
          <h4>Relocation Application</h4>
         <form action="">
             <div><p>Title: <span id="ti"></span> </p>
-                <p>Name: <span id="f"></span><span id="l"></span> </p>
+                <p>Name: <span id="l">  </span><span id="f"></span> </p>
                 <p>Gender: <span id="g"></span> </p>
                 <p>Phone No. : <span id="p"></span> </p>
                 <p>State of Health: <span>Good</span> </p>
                 <p>Course: <span id="c"></span> </p> 
                 </div>
 
-            <section><p>Application History</p>
+            <section><h5>Application History</h5>
                 <hr>
                 <span>No History</span></section>
 
-            <article><p>Application Status</p>
+            <article><h5>Application Status</h5>
                 <hr>
                 <p>State Code. :<span>IM/22A/<span id="s"></span></span>  </p>
                 <label for="reason">Reason for Relocation</label>
                 <br>
-                <select name="" id="" required>
-                    <option></option>
+                <select name="" id="reason" required>
+                    <option value=""></option>
                     <option value="Insecurity">Insecurity</option>
                     <option value="Marital">Marital</option>
                 </select>
                 <br>
                 <label for="why">Description for Relocating</label>
-                <br><input type="textarea" rows="5" cols="30"  required>
+                <br><input id="why" type="textarea" rows="5" cols="30"  required>
                 <br>
     
                 <label for="state">State Relocating to</label>
-                <br><input type="text" required>
+                <br><input id="state" type="text" required>
             <br>
             <label for="img">Add Document:</label>
-                <input type="file" id="img" name="img" accept="image/*">
+                <input type="file" id="img" name="img" accept="image/*" required>
             </article>
                 
-                
-
-            
             <br>
-            <p class="butt" onclick="send();">Send Request</p>
+            <div id="but" onclick="send();">Send Request</div>
         </form>
         
         <div id="popup1" class="overlay">
           <div class="popup">
             <img src="./xig67ak5T.gif" alt="">
             <p class="content">
-               Request Sent. <a href="./user.html">Back</a>
+               Request Sent. <a href="./home.html">Back</a>
             </p>
             
           </div>
@@ -95,7 +93,9 @@
 
   </div>
     <footer>
-      <P>mesezi 2022</P>
+      <P>Copyright &copy; <span id="year"></span> mesezi</P>
+      <a href="mailto: msezi.usv@gmail.com" target="_blank" type="email"> <img src="./gmail.png" alt=""> msezi.usv@gmail.com</a>
+      <a href="" target="_blank"><img src="./logo-twitter-png-5859.png" alt=""> @_mesezi</a>
         </footer>
     <script src="js/bootstrap.js"></script>
     <script>
@@ -121,9 +121,19 @@ var m = obj.marital
      else {
          document.getElementById("ti").innerHTML = "Mr"
      }
+     var w = document.getElementById("why");
+       var r = deocument.getElementById("reason");
+       var st = document.getElementById("state");
+       var img = document.getElementById("img");
      function send(){
+       if (w||r||st||img === ""){
+         alert ("Ensure all parameters are filled");
+       }
+       else{
         document.getElementById("popup1").style.visibility = "visible";
            document.getElementById("popup1").style.opacity = "1";
+       }
+
      }
 
         

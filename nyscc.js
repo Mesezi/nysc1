@@ -4,6 +4,8 @@ var today = new Date();
   let year = today.getFullYear()
  let month = today.getMonth()+1
   let day = today.getDate();
+  document.getElementById("year").innerHTML = year;
+  
 function monthDate(){
     if (month == 1){
         month = "Januray";
@@ -49,6 +51,27 @@ var date = day + " " + month + ", " + year;
 let hour = today.getHours();
  let min = today.getMinutes();
  var time = ""
+
+ // if (hour.length == 2)
+    // function mode (){
+   ///     var d = document.getElementsByTagName("header");
+    //    var f = document.getElementsByTagName("footer");
+   //     var n = document.getElementsByClassName("navbar");
+     //   var t = document.getElementById("note");
+     //   let dark = document.body; 
+        
+    //    if (hour > 13 &&  <= 24){ 
+    //    dark.style.backgroundColor = "#333";
+   //     dark.style.color = "white";
+     //   f[0].style.backgroundColor = "black";
+    //    t.style.boxShadow = "black 0 0 0px 0";
+   //     d[0].style.boxShadow = "black 0 0 10px 0";
+   //     n[0].style.boxShadow = "black 0 0 5px 0";
+        
+   //     }
+   //     else return 
+   // }
+//mode();  
 
 function amPm(){
     if (hour === 1){
@@ -155,29 +178,10 @@ function setMin(){
 
 }
 setMin();
+
 var currenttime = hour + ":" + min + " " + time;
     document.getElementById("time").innerHTML = currenttime;
-    
-
-   // function mode (){
-   ///     var d = document.getElementsByTagName("header");
-    //    var f = document.getElementsByTagName("footer");
-   //     var n = document.getElementsByClassName("navbar");
-     //   var t = document.getElementById("note");
-     //   let dark = document.body; 
-        
-    //    if (hour > 13 &&  <= 24){ 
-    //    dark.style.backgroundColor = "#333";
-   //     dark.style.color = "white";
-     //   f[0].style.backgroundColor = "black";
-    //    t.style.boxShadow = "black 0 0 0px 0";
-   //     d[0].style.boxShadow = "black 0 0 10px 0";
-   //     n[0].style.boxShadow = "black 0 0 5px 0";
-        
-   //     }
-   //     else return 
-   // }
-//mode();    
+  
 }
 
 
